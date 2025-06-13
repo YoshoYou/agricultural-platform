@@ -1,8 +1,9 @@
 import "../Styles/styles.css"
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { ch_blo } from "../../assets/export";
 
-    export const ContactForm = () => {
+    export const ContactForm = ({language}) => {
     const [formData, setFormData] = useState({
         name: '', // أضفنا حقل الاسم
         email: '',
@@ -43,14 +44,14 @@ import emailjs from 'emailjs-com';
         
         setNotification({
             type: 'success',
-            message: 'تم إرسال رسالتك بنجاح!'
+            message: 'Your Message has been sent successfylly'
         });
         setFormData({ name: '', email: '', message: '' });
         
         } catch (error) {
         setNotification({
             type: 'error',
-            message: 'حدث خطأ أثناء الإرسال، يرجى المحاولة لاحقاً'
+            message: 'Something Went Wrong, Check Your Internet Connection and Try again'
         });
         } finally {
         setIsLoading(false);
@@ -58,56 +59,59 @@ import emailjs from 'emailjs-com';
     };
 
     return (
-        <div className=" contact-form">
-        <h2 className="text-black-500">اتصل بنا</h2>
-        
-        {notification && (
-            <div className={alert  `${notification.type}`}>
-            {notification.message}
-            </div>
-        )}
-      
-      <form onSubmit={handleSubmit}>
-            <div className="form-group">
-            <label>اسمك:</label>
+        <div className=" md:m-16 m-5 sm:m-10 flex flex-col justigy-center items-center  relative overflow-hidden  ">
+        <h2 className="text-4xl sm:text-7xl/25 tracking-widest  text-lime-400"> Contact US</h2>
+      <form className=" flex flex-col justify-center items-center mt-20 ml-5 text-center  flex-2  gap-10 w-full sm:text-2xl/13 sm:p-5 text-l/15  " onSubmit={handleSubmit}>
+            <div className="flex flex-col justify-start w-fit ">
+            <label>Please enter your name</label>
             <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="أدخل اسمك"
+                className="border-3 border-lime-400 "
+                placeholder=" Your full name"
                 required
             />
             </div>
         
-            <div className="form-group">
-            <label>بريدك الإلكتروني:</label>
+            <div className="flex flex-col justify-start w-fit">
+            <label> Enter Your E-mail</label>
             <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                className="border-3 border-lime-400 "
                 placeholder="example@domain.com"
                 required
             />
             </div>
             
-            <div className="form-group">
-            <label>رسالتك:</label>
-            <textarea className="border-4"
+            <div className="flex flex-col justify-start w-fit ">
+            <label className="w-fit">Write Your Message Here</label>
+            <img src="" className="absolute" alt="" />
+            <textarea 
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="أدخل رسالتك هنا..."
+                className="border-3 border-lime-400 w-50 sm:w-100 h-35 "
+                placeholder="  Your Message"
                 required
-                minLength="10"
             />
             </div>
-            
-            <button type="submit" disabled={isLoading}>
-            {isLoading ? 'جاري الإرسال...' : 'إرسال الرسالة'}
+            {notification && (
+            <div className={  ` text-red-400 ${notification.type}`}>
+            {notification.message}
+            </div>
+             )}
+            <button className=" w-40 sm:w-full border-3 border-lime-400 cursor-pointer hover:bg-green-400 click:border-green-400" type="submit" disabled={isLoading}>
+            {isLoading ? 'Sending ....' : 'Send'}
             </button>
         </form>
+        <div className="w-1\3 absolute  md:top-50 sm:top-55 top-35 -right-4  md:-right-10  -z-1 w-40 h-40  sm:w-70 sm:h-50 md:w-100 sm:h-100  ">
+            <img className="rotate-[180deg]" src={ch_blo} alt="" />
+        </div>
         </div>
     );
     };

@@ -1,7 +1,0 @@
-@import "tailwindcss";
-.text-direction-ar {
-    direction: rtl;
-}
-.text-direction-en {
-    direction: ltr;
-}

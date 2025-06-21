@@ -67,6 +67,8 @@ export const ContacInfoAr =[
         name:"أدخل اسمك الكامل من فضلك",
         email:"أدخل الأيميل الخاص بك من فضلك",
         message:"أكتب رأيك و رسالتك هنا من فضلك",
+        sending:"جاري الأرسال ....",
+        sendButton:"إرسال"
     }
 ]
 export const ContacInfoEn =[
@@ -74,5 +76,7 @@ export const ContacInfoEn =[
         name:"Enter your full name please",
         email:"Enter your Email please",
         message: "Enter your Message here",
+        sending:"Sending .....",
+        sendButton:"Send"
     }
 ]

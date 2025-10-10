@@ -1,3 +1,4 @@
+import { floral, lotus, petals, sakura } from "../assets/export";
 
 
 export const ListName = [
@@ -59,7 +60,7 @@ export const AboutTheOwnerAr =[
     {
     name:"مايا جوني",
     des:"   مرحبا جميعا!،اسمي مايا، أنا مهندسة زراعية، أحب أن أشارك معكم  في هذه المنصة المميزة حبي للنباتات والمروج الزراعية الخضراء الكبيرة،أنا أحاول أن أجمع أكبر قدر من المعلومات عن النباتات والأزهار المفضلة لدي والتي نستخدمها جميعا في حياتنا اليومية، وسأريكم شغفي في تصميم الحدائق وتزيينها، أتمنى لكم جميعا رحلة ممتعة في موقعي الزراعي ، أضل التمنيات مني لكم جميعا !!!",
-    key:2,
+     key:2,
 }
 ];
 export const ContacInfoAr =[
@@ -79,4 +80,26 @@ export const ContacInfoEn =[
         sending:"Sending .....",
         sendButton:"Send"
     }
+]
+export const Experience = [
+    {
+        title:'dsljflskjf',
+        img:`${sakura}`,
+        id:1
+    },
+    {
+        title:'dsljflskjf',
+        img:`${floral}`,
+        id:2
+    },
+    {
+        title:'dsljflskjf',
+        img:`${lotus}`,
+        id:3
+    },
+    {
+        title:'dsljflskjf',
+        img:`${petals}`,
+        id:4
+    },
 ]

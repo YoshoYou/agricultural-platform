@@ -15,4 +15,11 @@ import lotus from './lotus-flower.png';
 import smflower from './smflower.png'
 import petals from './petals.png'
 import pink from './pink.png'
-export{logo1,pink,smflower,petals,lotus,planting,susAgr,sunflower,sunflower_1,flowers,pre_agr,jouney,maya,floral,sakura,ch_blo,maya_jouney_CV}
+import bright from './bright.png'
+import lightMood from './lightMood.png'
+import darkMood from './darkMood.png'
+import insta from './instagram.png'
+import facebook from './facebook.png'
+import telegram from './telegram.png'
+import rightC from './rightC.png'
+export{insta,rightC,telegram,facebook,logo1,pink,bright,lightMood,darkMood,smflower,petals,lotus,planting,susAgr,sunflower,sunflower_1,flowers,pre_agr,jouney,maya,floral,sakura,ch_blo,maya_jouney_CV}

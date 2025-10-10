@@ -1,0 +1,24 @@
+.slick-prev::before,
+.slick-next::before {
+    color: rgb(57, 204, 89) !important;
+    font-size: 30px !important;
+    opacity: 1 !important;
+}
+
+.slick-next:hover::before,
+.slick-prev:hover::before {
+ color: rgb(73, 252, 33) !important; 
+ fill: black !important;
+ opacity: 1 !important;  
+}
+.slick-prev::before {
+    position: relative;
+    left: -30px;
+}
+.slick-next::before {
+    position: relative;
+    left: +30px;
+}
+/* .slick-dots li.slick-active button:before {
+    color: white;
+} */

@@ -5,3 +5,6 @@
 .text-direction-en {
     direction: ltr;
 }
+::-webkit-scrollbar {
+    display: none;
+}

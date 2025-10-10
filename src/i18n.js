@@ -16,7 +16,9 @@ i18n
       caches: ['cookie','localStorage'], // Where to cache detected language
     },
     backend: {
-      loadPath: 'Public/locales/{{lng}}/translation.json'
+      // Use Vite's BASE_URL so paths resolve correctly when the app is deployed
+      // (public/ is served from the site root, so combine with the configured base)
+      loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/translation.json`
     },
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

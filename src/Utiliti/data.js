@@ -5,47 +5,18 @@ export const ListName = [
 
     {
         title: "Home",
-        key:'Home',
     },
     {
         title: "About",
-        key: 'About',
     },
     {
         title: "Services",
-        key: 'Services',
     },
     {
         title: "Project",
-        key: 'Project'
     },
     {
         title: "Contact",
-        key: 'Contact'
-    },
-    
-];
-export const ArabicListName = [
-
-    {
-        title: "الرئيسية",
-        key:'Home',
-    },
-    {
-        title: "حول الكاتب",
-        key: 'About',
-    },
-    {
-        title: "الخدمات التي نقدمها",
-        key: 'Services',
-    },
-    {
-        title: "المشاريع ",
-        key: 'Project'
-    },
-    {
-        title: "اتصل بنا",
-        key: 'Contact'
     },
     
 ];

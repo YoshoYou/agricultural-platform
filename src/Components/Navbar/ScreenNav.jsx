@@ -3,13 +3,15 @@ import './Nav.css'
 import { ImLeaf } from "react-icons/im";
 import { ListName } from "../../Utiliti/data";
 import { useTranslation } from "react-i18next";
-export const ScreenNav = ({language}) => {
+import { useMood } from "../UseContext/MoodContext";
+export const ScreenNav = () => {
     const [menuIsOpen,setMenuIsOpen]=useState(false);
     let menuRef=useRef();
     let handleClick=()=>{
         setMenuIsOpen(!menuIsOpen)
     }
         const {t,i18n } = useTranslation();
+        const {language}=useMood()
            useEffect(()=>{
            if (language)
             i18n.changeLanguage(language);
@@ -39,7 +41,7 @@ export const ScreenNav = ({language}) => {
                 <ul  className={` text-xsl text-gray-600 flex-col absolute  ${language === 'arabic'?'left-1':'right-0'} border-green-400 border-3 z-400 ${menuIsOpen?'flex':'hidden'} slide-bottom`}>
              {
                  ListName.map((ele) => (
-                    <li key={ele.key} className={`border-b-2 px-4 py-2 z-4000 bg-lime-400  center flex items-center justify-center  border-green-400 hover:text-green-400 font-bold text-gray-950 ${ele.key==5? "border-none":""} cursor-pointer`}>
+                    <li key={ele.title} className={`border-b-2 px-4 py-2 z-4000 bg-lime-400  center flex items-center justify-center  border-green-400 hover:text-green-400 font-bold text-gray-950 cursor-pointer`}>
                         <a href={`#${ele.title}`}>{ele.title}</a></li>
                  ))
              }

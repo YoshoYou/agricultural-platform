@@ -21,7 +21,7 @@ const SlideShow = () => {
     <Slider {...settings} className="!w-50 !h-65 !flex !mb-5 ">
          {
                     Experience.map((e)=>(
-                      <div className="">
+                      <div className="" key={e.id}>
                       <img className="lg:w-50 lg:h-65 w-50 h-50 p-2 border-4 border-green-400" src={e.img} key={e.id} alt="" />
                       </div>
                     ))

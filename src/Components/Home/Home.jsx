@@ -4,11 +4,12 @@ import './../../i18n'
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { changeLanguage } from 'i18next';
-import { LiaAngular } from 'react-icons/lia';
-import UseMyEffect from '../UseMyEffect/UseMyEffect';
+
+import { useMood } from '../UseContext/MoodContext';
 
 
-export const Home = ({language}) => { 
+export const Home = () => { 
+  const {theme,language}=useMood();
    const {t,i18n } = useTranslation();
    
     useEffect(()=>{

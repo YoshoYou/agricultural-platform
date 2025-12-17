@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [ react(),tailwindcss()], 
   base: '/agricultural-platform/', 
   server: {
-    port:3000,//changd the port to 3000
+    port:3000,//changed the port to 3000
   }
 })

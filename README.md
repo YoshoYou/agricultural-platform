@@ -1,5 +1,5 @@
 # React + Vite
-# In this website, I used React JS + Vite and tailwind to make a responsive application that suits all screens and supports both english and arabic languages with possibility to support many other language the client desires. As You can see, this Portfolio made specifically to present the work of our passionate engineer Maya showing her talents in landscaping using programs such as : AutoCad and Architect RealTime.
+# In this website, I used React JS + Vite and tailwind with collaporation with copilot and AI tools to make a responsive application that suits all screens and supports both english and arabic languages with possibility to support many other language the client desires. As You can see, this Portfolio made specifically to present the work of our passionate engineer Maya showing her talents in landscaping using programs such as : AutoCad and Architect RealTime.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

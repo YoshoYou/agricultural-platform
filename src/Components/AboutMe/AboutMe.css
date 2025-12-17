@@ -24,9 +24,18 @@ span {
 	animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
 }
+.slide-left-reverse {
+	-webkit-animation: slide-left-reverse 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-left-reverse 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
 .slide-right {
 	-webkit-animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.slide-right-reverser {
+	-webkit-animation: slide-right-reverser 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-right-reverser 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
  /* * animation slide-left */
@@ -52,6 +61,17 @@ span {
   }
 }
  
+@keyframes slide-left-reverse {
+    0% {
+    -webkit-transform: translateX(-1600px);
+            transform: translateX(-1600px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+ 
  /* * animation slide-right */
 
 @-webkit-keyframes slide-right {
@@ -72,6 +92,18 @@ span {
   100% {
     -webkit-transform: translateX(1600px);
             transform: translateX(1600px);
+  }
+}
+
+@keyframes slide-right-reverser{
+  0% {
+
+        -webkit-transform: translateX(1600px);
+            transform: translateX(1600px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 

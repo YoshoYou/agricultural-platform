@@ -5,10 +5,11 @@ import { ch_blo, flowers } from "../../assets/export";
 import { ContacInfoAr, ContacInfoEn } from "../../Utiliti/data";
 import { useTranslation } from "react-i18next";
 import UseMyEffect from "../UseMyEffect/UseMyEffect";
+import { useMood } from "../UseContext/MoodContext";
 
-export const ContactForm = ({language,mood}) => {
+export const ContactForm = () => {
     const {t,i18n } = useTranslation();
-
+    const {language,theme}=useMood();
        useEffect(()=>{
        if (language)
         i18n.changeLanguage(language);
@@ -69,33 +70,33 @@ export const ContactForm = ({language,mood}) => {
     };
 
     return (
-        <div className={` ${mood ?'text-black':'text-white'} flex flex-col sm:flex-row sm:justify-between items-center gap-10  sm:mx-15 my-16 mb-30`}>
+        <div className={` ${theme==='light' ?'text-black':'text-white'} flex flex-col md:flex-row justify-between gap-30  items-center   sm:mx-15 my-16 mb-30`}  id={"Contact"}>
             <div className="border-4 border-lime-400 px-10 py-3 shadow-xl/50">
       
                  <h2 className="text-4xl sm:text-5xl/25 tracking-widest  text-lime-400">{t("Contact_US")}</h2>      
             
-            <form className=" flex flex-col justify-center items-center sm:items-start gap-4  text-center my-15  w-full sm:text-2xl/13  text-l/15  " onSubmit={handleSubmit}>
+            <form className=" flex flex-col justify-center items-center sm:items-start gap-4  text-center my-5 w-full sm:text-2xl/13  text-l/15  " onSubmit={handleSubmit}>
                 <div className="flex flex-col w-fit ">
-                <label>{t("name")}</label>
+                <label className="w-fit">{t("name")}</label>
                 <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="border-3 outline-hidden bg-gray-100 focus:border-green-400 border-lime-400 mt-1"
+                    className="border-3 outline-hidden bg-gray-100 focus:border-green-400 border-lime-400 mt-0.5 h-10 p-4"
                     placeholder=" Your full name"
                     required
                 />
                 </div>
             
                 <div className="flex flex-col  w-fit">
-                <label>{t("email")}</label>
+                <label className="w-fit">{t("email")}</label>
                 <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="border-3 outline-hidden bg-gray-100 focus:border-green-400 border-lime-400 mt-3"
+                    className="border-3 outline-hidden bg-gray-100 focus:border-green-400 border-lime-400 mt-0.5 h-10 p-4"
                     placeholder="example@domain.com"
                     required
                 />
@@ -107,7 +108,7 @@ export const ContactForm = ({language,mood}) => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="border-3 outline-hidden bg-gray-100 focus:border-green-400 border-lime-400 w-50 sm:w-100 h-35 mt-3"
+                    className="border-3 outline-hidden bg-gray-100 focus:border-green-400 border-lime-400 w-50 sm:w-100 h-35 mt-0.5 p-4"
                     placeholder="  Your Message"
                     required
                 />
@@ -124,7 +125,7 @@ export const ContactForm = ({language,mood}) => {
             </form>
         </div>
       
-        <div className=" w-30 h-40   md:h-50 md:w-100 sm:h-100  ">
+        <div className=" w-50 h-6-   md:h-50 md:w-100 sm:h-100  ">
             <img  src={flowers} alt="" />
         </div>
         </div>
